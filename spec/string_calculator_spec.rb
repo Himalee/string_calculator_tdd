@@ -20,20 +20,20 @@ describe StringCalculator do
       end
 
     context "two numbers" do
-      context "given '2,4'" do
-        it "returns 6" do
+    context "given '2,4'" do
+      it "returns 6" do
           expect(StringCalculator.add("2,4")).to eql(6)
+      end
+    end
+    end
+
+    context "Three or more numbers error" do
+      context "given '2,4,6'" do
+        it "returns zero" do
+          expect(StringCalculator.add("2,4,6")).to eql(0)
         end
       end
     end
 
-    context "three numbers" do
-      context "given '2,4,6'" do
-        it "returns 12" do
-          expect(StringCalculator.add("2,4,6")).to eql(12)
-        end
-      end
-    end
-        
   end
 end
